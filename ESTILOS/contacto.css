@@ -1,52 +1,148 @@
 *{
     box-sizing: border-box;
 }
-body main section{
+
+
+
+body .items-de-arriba   {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #000000;
+}
+body .items-de-arriba  .items-top-nav {
+    display: flex;
+    width: 65%;
+    justify-content: space-between;
+    background-color: black;
+
+
+    
+}
+
+body .items-de-arriba  .items-top-nav .top-nav {
+    width: 55%;
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: space-between;
-    /* background-color: aqua; */
+    
+}
+
+body .items-de-arriba  .items-top-nav .top-nav .item {
+    display: flex;
+    /* width: 5%; */
+}
+
+body .items-de-arriba  .items-top-nav .top-nav .msi img {
+    height: 26px;
+}
+
+body .items-de-arriba  .items-top-nav .contacto-nav {
+    display: flex;
+    width: 45%;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    justify-content: end;
+}
+
+body .items-de-arriba  .items-top-nav .contacto-nav a {
+    text-decoration: none;
+}
+
+body .items-de-arriba  .items-top-nav .contacto-nav .fa-solid {
+    font-size: 15px;
+    color: #c7c7c7;
+}
+
+body .items-de-arriba  .items-top-nav .contacto-nav span {
+    color: #c7c7c7;
+    font-size: 15px;
+}
+
+body .items-de-arriba  .items-top-nav .contacto-nav .telefono {
+    align-items: center;
+    display: flex;
+    gap: 5px;
+}
+
+body .items-de-arriba  .items-top-nav .contacto-nav .mail {
+    align-items: center;
+    display: flex;
+    gap: 5px;
+
+}
+
+
+body .menus  {
+    width: 100%;
+    background-color: #000000;
+    justify-content: center;
+    display: flex;
+}
+body .menus .menu{
+    width: 65%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0px;
+    background-color: black;
+  
+
+}
+body .menus .menu a{
+    color: #c9c9c9;
+    font-size: 20px;
+    text-decoration: none;
+}
+body .menus .menu a:hover{
+    color: rgb(88, 200, 220);
+
+}
+
+
+
+
+
+body main  .mail-y-direccion{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
     width: 65%;
     margin-bottom: 50px;
     flex-wrap: wrap;
     gap: 20px;
 }
-body main section .container1{
+body main  .mail-y-direccion .container1{
     min-width: 500px;
     width: 45%;
     display: flex;
     flex-direction: column;
     background-color: #fffefe;
-    /* background-color: aqua; */
-  
 }
-body main section .container1 .titulo{
+body main  .mail-y-direccion .container1 .titulo{
     padding-top: 30px;
 }
-body main section .container1 div{
+body main  .mail-y-direccion .container1 div{
     display: flex;
     flex-direction: column;
-    /* padding-top: 10px; */
 }
-body main section .container1 .info span{
+body main  .mail-y-direccion .container1 .info span{
     padding: 25px;
     border-bottom: 1px solid rgba(128, 128, 128, 0.325);
 }
-body main section .container1 span{
+body main  .mail-y-direccion .container1 span{
     padding: 10px;
     padding-left: 25px;
 }
-body main section .container2{
-    min-width: 45%;
+body main  .mail-y-direccion .container2{
+    min-width: 25%;
     min-width: 500px;
-
-    width: 50%;
+    width: 45%;
     background-color: #fffefe;
-    justify-content: space-between;
-    align-items: center;
-    
 }
-body main section .container2 .formulario{
+body main .mail-y-direccion .container2 .formulario{
     display: flex;
     gap: 20px;
     width: 100%;
@@ -56,12 +152,12 @@ body main section .container2 .formulario{
     align-items: center ;
     margin-top: 10px;
 }
-body main section .container2 .formulario .nombre-mail{
+body main .mail-y-direccion .container2 .formulario .nombre-mail{
     width: 90%;
     display: flex;
     justify-content: space-between;
 }
-body main section .container2 .formulario .nombre-mail input{
+body main .mail-y-direccion .container2 .formulario .nombre-mail input{
     /* width: 45%; */
     border: 1px solid #eaeaea;
     border-radius: 4px;
@@ -70,11 +166,11 @@ body main section .container2 .formulario .nombre-mail input{
     padding: 20px;
     width: 90%;
 }
-body main section .container2 .formulario .mensaje{
+body main .mail-y-direccion .container2 .formulario .mensaje{
     display: flex;
     width: 90%;
 }
-body main section .container2 .formulario .mensaje input{
+body main .mail-y-direccion .container2 .formulario .mensaje input{
     border: 1px solid #eaeaea;
     border-radius: 4px;
     outline: 0;
@@ -83,12 +179,12 @@ body main section .container2 .formulario .mensaje input{
     width: 100%;
     overflow: scroll;
 }
-body main section .container2 .formulario .boton{
+body main .mail-y-direccion .container2 .formulario .boton{
     width: 90%;
     justify-content: center;
     
 }
-body main section .container2 .formulario .boton button{
+body main .mail-y-direccion .container2 .formulario .boton button{
     width: 100%;
     border: 2px solid transparent;
     border-radius: 4px;
@@ -101,19 +197,19 @@ body main section .container2 .formulario .boton button{
     text-decoration: none;
     margin-bottom: 40px;
 }
-body main section .container2 .direccion {
+body main .mail-y-direccion .container2 .direccion {
     width: 100%;
     justify-content: center;
     display: flex;
     padding-bottom: 10px;
 }
-body main section .container2 .direccion iframe{
+body main .mail-y-direccion .container2 .direccion iframe{
     width: 90%;
     height: 400px
     
 }
 @media (max-width:900px) and (min-width:300px){
-    body main section{
+    body main .mail-y-direccion{
         width: 100%;
         justify-content: center;
         flex-direction: column-reverse;
