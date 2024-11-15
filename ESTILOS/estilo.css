@@ -10,6 +10,8 @@ body {
     display: flex;
     width: 100%;
     flex-direction: column;
+    position: relative;
+
 }
 
 body header {
@@ -18,17 +20,29 @@ body header {
     width: 100%;
     align-items: center;
     background-color: black;
-  
+    /* position: relative; */
+    position: sticky;
+    top: 0;
+    z-index: 6;
 }
 
-body header .items-top-nav {
+body .items-de-arriba   {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #000000;
+}
+body .items-de-arriba  .items-top-nav {
     display: flex;
     width: 65%;
     justify-content: space-between;
+    background-color: black;
+
+
     
 }
 
-body header .items-top-nav .top-nav {
+body .items-de-arriba  .items-top-nav .top-nav {
     width: 55%;
     display: flex;
     flex-direction: row;
@@ -37,16 +51,16 @@ body header .items-top-nav .top-nav {
     
 }
 
-body header .items-top-nav .top-nav .item {
+body .items-de-arriba  .items-top-nav .top-nav .item {
     display: flex;
     /* width: 5%; */
 }
 
-body header .items-top-nav .top-nav .msi img {
+body .items-de-arriba  .items-top-nav .top-nav .msi img {
     height: 26px;
 }
 
-body header .items-top-nav .contacto-nav {
+body .items-de-arriba  .items-top-nav .contacto-nav {
     display: flex;
     width: 45%;
     flex-direction: row;
@@ -55,27 +69,27 @@ body header .items-top-nav .contacto-nav {
     justify-content: end;
 }
 
-body header .items-top-nav .contacto-nav a {
+body .items-de-arriba  .items-top-nav .contacto-nav a {
     text-decoration: none;
 }
 
-body header .items-top-nav .contacto-nav .fa-solid {
+body .items-de-arriba  .items-top-nav .contacto-nav .fa-solid {
     font-size: 15px;
     color: #c7c7c7;
 }
 
-body header .items-top-nav .contacto-nav span {
+body .items-de-arriba  .items-top-nav .contacto-nav span {
     color: #c7c7c7;
     font-size: 15px;
 }
 
-body header .items-top-nav .contacto-nav .telefono {
+body .items-de-arriba  .items-top-nav .contacto-nav .telefono {
     align-items: center;
     display: flex;
     gap: 5px;
 }
 
-body header .items-top-nav .contacto-nav .mail {
+body .items-de-arriba  .items-top-nav .contacto-nav .mail {
     align-items: center;
     display: flex;
     gap: 5px;
@@ -90,9 +104,7 @@ body header .main-header {
     justify-content: center;
     align-items: center;
     
-    position: sticky;
-    top: 0;
-    z-index: 6;
+   
 }
 
 
@@ -205,27 +217,47 @@ body header .main-header .main-header-nav .seccion2 .usuario-carrito .fa-regular
 }
 
 #rgbar {
-  
-
+    animation: example 10s infinite;
     width: 100%;
-    background-color: rgba(255, 0, 0, 1);
-    background: linear-gradient(45deg, rgba(255, 0, 0, 1) 0%, rgba(255, 0, 255, 1) 18%, rgba(0, 0, 255, 1) 30%, rgba(0, 240, 255, 1) 45%, rgba(0, 255, 0, 1) 63%, rgba(255, 255, 0, 1) 80%, rgba(255, 120, 0, 1) 90%, rgba(255, 0, 0, 1) 100%);    height: 3px;
+    background: linear-gradient(45deg, rgba(255, 0, 0, 1) 0%, rgba(255, 0, 255, 1) 18%, rgba(0, 0, 255, 1) 30%, rgba(0, 240, 255, 1) 45%, rgba(0, 255, 0, 1) 63%, rgba(255, 255, 0, 1) 80%, rgba(255, 120, 0, 1) 90%, rgba(255, 0, 0, 1) 100%);  
+    height: 3px;
+    background: rgba(255, 0, 89, 1);
+    background: linear-gradient(45deg, rgba(255, 0, 0, 1) 0%, rgba(255, 0, 255, 1) 18%, rgba(0, 0, 255, 1) 30%, rgba(0, 240, 255, 1) 45%, rgba(0, 255, 0, 1) 63%, rgba(255, 255, 0, 1) 80%, rgba(255, 120, 0, 1) 90%, rgba(255, 0, 0, 1) 100%);
+    background-size: 400% 400%;
 }
-body header .menu{
+@keyframes example {
+    0% {
+        background-position: 400% 0%;
+    }
+    100% {
+        background-position: 0% 400%;
+    }
+  /* 0%   {background: linear-gradient(45deg, rgba(255, 0, 0, 1) 0%, rgba(255, 0, 255, 1) 100%) ;}
+  100% {background: linear-gradient(45deg,rgba(255, 255, 0, 1) 0%, rgba(255, 120, 0, 1) 100% ) ;} */
+
+}
+body .menus  {
+    width: 100%;
+    background-color: #000000;
+    justify-content: center;
+    display: flex;
+}
+body .menu{
     width: 65%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 0px;
+    background-color: black;
   
 
 }
-body header .menu a{
+body .menu a{
     color: #c9c9c9;
     font-size: 20px;
     text-decoration: none;
 }
-body header .menu a:hover{
+body .menu a:hover{
     color: rgb(88, 200, 220);
 
 }
@@ -747,7 +779,7 @@ body .contacto a{
     text-decoration: none;
     width: 100%;
 }
-body footer .barra-inferior{
+body  .barra-inferior{
     display: none;
     align-items: center;
     width: 100%;
@@ -755,26 +787,28 @@ body footer .barra-inferior{
     justify-content: space-around;
     position: sticky;
     bottom: 0;
+    z-index: 8;
 }
-body footer .barra-inferior div{
+body  .barra-inferior div{
     display: flex;
     flex-direction: column;
     width: 20%;
 }
-body footer .barra-inferior div img{
+body  .barra-inferior div img{
     width: 80%;
 }
-body footer .barra-inferior div a{
+body  .barra-inferior div a{
+    text-decoration: none;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-body footer .barra-inferior div a .fa-solid,body footer .barra-inferior div a .fa-regular{
+body  .barra-inferior div a .fa-solid,body .barra-inferior div a .fa-regular{
     font-size: 20px;
     color: #fffefe;
 }
-body footer .barra-inferior div a span{
+body  .barra-inferior div a span{
     font-size: 15px;
     color: #fffefe;
 }
@@ -786,10 +820,10 @@ body footer .barra-inferior div a span{
     }
 }
 @media (max-width:1500px) and (min-width:1200px){
-    body header .items-top-nav{
+    body .items-de-arriba  .items-top-nav{
         width: 80%;
     }
-    body header .items-top-nav .top-nav{
+    body .items-de-arriba  .items-top-nav .top-nav{
         width: 80%;
     }
     body main section {
@@ -798,10 +832,10 @@ body footer .barra-inferior div a span{
     body header .main-header .main-header-nav {
         width: 80%;    
     }
-    body header .menu{
+    body .menus  .menu{
         width: 80%;    
     }
-    body header .menu{
+    body  .menus .menu{
         width: 80%;    
     }
     body main .seccion2 {
@@ -833,7 +867,7 @@ body footer .barra-inferior div a span{
 
 }
 @media (max-width:1200px) and (min-width:900px){
-    body header .items-top-nav{
+    body .items-de-arriba .items-top-nav{
         width: 100%;
         flex-direction: column;
         justify-content: center;
@@ -842,7 +876,7 @@ body footer .barra-inferior div a span{
     body header .main-header .main-header-nav {
         width: 100%;    
     }
-    body header .menu{
+    body .menus .menu{
         width: 100%;    
     }
     body main .seccion2 {
@@ -906,6 +940,12 @@ body footer .barra-inferior div a span{
 @media (max-width:900px) and (min-width:300px){
     body header{
         display: none;
+    }
+    body .menus .menu{
+        display: none;    
+    }
+    body .items-de-arriba .items-top-nav{
+        display: none;    
     }
     body main .banner {
         display: none;
@@ -976,7 +1016,7 @@ body footer .barra-inferior div a span{
     body .contacto{
         display: none;    
     }
-    body footer .barra-inferior {
+    body  .barra-inferior {
         display: flex;
         min-height: 50px;
     }
