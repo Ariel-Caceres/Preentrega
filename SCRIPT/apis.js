@@ -68,34 +68,34 @@ function getChracters(done) {
 
 
 
-function getPokemones(done) {
-const results = fetch("https://rickandmortyapi.com/api/character")
-results
-        .then(response => response.json())
-        .then(datos => {
-         done(datos)
-})
+// function getPokemones(done) {
+// const results = fetch("https://rickandmortyapi.com/api/character")
+// results
+//         .then(response => response.json())
+//         .then(datos => {
+//          done(datos)
+// })
                 
-}
-getPokemones(datos => {
-                datos.results.forEach(pokemon => {
-                    let tarjeta = document.querySelector("body main div")
-                    let divnuevo = document.createElement("div");
-                    divnuevo.classList.add("tilin");
-                    divnuevo.innerHTML=`
-                        <div>
-                        <div class="pokemon">
-                        <div class="image-container ">
-                        <img src="${pokemon.image}" alt="">
-                        </div>
-                        <h2>${pokemon.name}</h2>
-                        <span>${pokemon.status}</span>
-                        </div>
-                        </div>
-                        `;
-                        tarjeta.appendChild(divnuevo)   
+// }
+// getPokemones(datos => {
+//                 datos.results.forEach(pokemon => {
+//                     let tarjeta = document.querySelector("body main div")
+//                     let divnuevo = document.createElement("div");
+//                     divnuevo.classList.add("tilin");
+//                     divnuevo.innerHTML=`
+//                         <div>
+//                         <div class="pokemon">
+//                         <div class="image-container ">
+//                         <img src="${pokemon.image}" alt="">
+//                         </div>
+//                         <h2>${pokemon.name}</h2>
+//                         <span>${pokemon.status}</span>
+//                         </div>
+//                         </div>
+//                         `;
+//                         tarjeta.appendChild(divnuevo)   
                                       
-                        console.log(data);
-                    });
-                });
+//                         console.log(data);
+//                     });
+//                 });
         
